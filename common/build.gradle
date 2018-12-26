@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'junit:junit:4.12'
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api 'com.android.support:support-v4:28.0.0'
+    api 'com.android.support:support-vector-drawable:28.0.0'
+    api 'com.android.support:design:28.0.0'
+    api 'com.android.support:gridlayout-v7:28.0.0'
+    api 'com.android.support:mediarouter-v7:28.0.0'
+    api 'com.android.support:cardview-v7:28.0.0'
+    api 'com.android.support:palette-v7:28.0.0'
+    api 'com.android.support:recyclerview-v7:28.0.0'
+    api 'com.android.support:exifinterface:28.0.0'
+    api 'com.android.support:support-annotations:28.0.0'
+    api 'com.google.code.gson:gson:2.8.2'
+    api 'com.squareup.okhttp3:okhttp:3.10.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    api 'com.android.support:multidex:1.0.3'
+    api 'com.google.zxing:core:3.3.3'
+    api 'me.jessyan:progressmanager:1.5.0'
+    api 'me.zhanghai.android.materialratingbar:library:1.3.1'
+    api 'joda-time:joda-time:2.10'
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //    api 'com.github.jdsjlzx:LRecyclerView:1.5.0'
+    api 'com.necer.ncalendar:ncalendar:2.4.6'
+    api 'com.google.android:flexbox:1.0.0'
+    //    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    api 'com.liulishuo.filedownloader:library:1.7.4'
+    api 'in.srain.cube:ultra-ptr:1.0.11'
+//    api 'pub.devrel:easypermissions:1.2.0'
+    api 'com.github.bumptech.glide:glide:4.8.0'
+    api 'com.yalantis:ucrop:2.2.0-native'
+}

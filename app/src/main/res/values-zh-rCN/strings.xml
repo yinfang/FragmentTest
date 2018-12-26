@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Club11Test</string>
+    <string name="home">职位</string>
+    <string name="dashboard">公司</string>
+    <string name="notifications">消息</string>
+    <string name="visibility">我的</string>
+</resources>
