@@ -39,6 +39,28 @@ import com.clubank.util.UI;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * Fragment回退栈
+ * <p>
+ * popBackStack(); 清除回退栈中栈顶的Fragment
+ * popBackStack(String tag, int i );
+ * <p>
+ * 如果i=0,回退到该tag所对应的Fragment层
+ * 如果i=FragmentManager.POP_BACK_STACK_INCLUSIVE,回退到该tag所对应的Fragment的上一层
+ * <p>
+ * <p>
+ * popBackStackImmediate() 立即清除回退栈中栈顶Fragment
+ * popBackStackImmediate(String tag, int i );
+ * <p>
+ * 如果tag=null,i=0,会弹出回退栈中最上层的那一个fragment
+ * 如果i=FragmentManager.POP_BACK_STACK_INCLUSIVE,会弹出所有回退栈中的fragment
+ * <p>
+ * <p>
+ * getBackStackEntryCount(); 获取回退栈中Fragment的个数
+ * getBackStackEntryAt(int index) 获取回退栈中该索引值下的Fragment
+ */
+
+
 public abstract class BaseFragment extends Fragment implements View.OnClickListener {
     /**
      * Standard activity result: operation canceled.
@@ -362,39 +384,16 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     /**
      * 打开新的Fragment 并将当前Fragment添加至回退栈
      */
-    public void startToFragment(Context context, int container, Fragment newFragment) {
+    public void startToFragment(int container, Fragment newFragment) {
         FragmentManager manager = getFragmentManager();
         FragmentTransaction transaction = null;
         if (manager != null) {
             transaction = manager.beginTransaction();
             transaction.replace(container, newFragment);
-            transaction.addToBackStack(context.getClass().getName());//将Fragment添加到回退栈中
+            transaction.addToBackStack(null);
+//            transaction.addToBackStack(context.getClass().getName());//将Fragment添加到回退栈中
             transaction.commit();
         }
-    }
-
-    /**
-     * 一层层回退Fragment
-     * <p>
-     * popBackStack(); 清除回退栈中栈顶的Fragment
-     * popBackStack(String tag, int i );
-     * <p>
-     * 如果i=0,回退到该tag所对应的Fragment层
-     * 如果i=FragmentManager.POP_BACK_STACK_INCLUSIVE,回退到该tag所对应的Fragment的上一层
-     * <p>
-     * <p>
-     * popBackStackImmediate() 立即清除回退栈中栈顶Fragment
-     * popBackStackImmediate(String tag, int i );
-     * <p>
-     * 如果tag=null,i=0,会弹出回退栈中最上层的那一个fragment
-     * 如果i=FragmentManager.POP_BACK_STACK_INCLUSIVE,会弹出所有回退栈中的fragment
-     * <p>
-     * <p>
-     * getBackStackEntryCount(); 获取回退栈中Fragment的个数
-     * getBackStackEntryAt(int index) 获取回退栈中该索引值下的Fragment
-     */
-    public void backFragment() {
-        Objects.requireNonNull(getActivity()).getFragmentManager().popBackStack();
     }
 
     public void dateSet(View view, int year, int month, int day) {

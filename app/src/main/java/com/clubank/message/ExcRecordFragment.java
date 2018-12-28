@@ -78,7 +78,6 @@ public class ExcRecordFragment extends BaseFragment implements MainRecyclerViewA
     @Override
     public void onItemClickListener(int postion) {
         Toast.makeText(context, "点击了第" + postion + "项", Toast.LENGTH_SHORT).show();
-        openIntent(FragBack2.class,"Fragment回退栈");
     }
 
     @Subscribe(sticky = true)//EventBus接受粘性事件

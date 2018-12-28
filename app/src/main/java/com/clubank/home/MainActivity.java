@@ -1,14 +1,20 @@
 package com.clubank.home;
 
 import android.Manifest;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 
 import com.clubank.club11test.R;
 import com.clubank.company.CompanyFragment;
@@ -19,20 +25,29 @@ import com.clubank.message.MessageFragment;
 import com.clubank.util.UI;
 import com.clubank.widget.BottomNavigationViewEx;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements View.OnTouchListener {
     private long exittime;
     private FragmentManager manager; //Fragmnet的管理器
     private FragmentTransaction transaction; //Fragment事物
-    private MyFragment  my_fragment;//我的页面
+    private MyFragment my_fragment;//我的页面
     private CompanyFragment company_fragment;//公司页面
-    private JobFragment   job_fragment;//职位页面
-    private MessageFragment  message_fragment; //消息页面
+    private JobFragment job_fragment;//职位页面
+    private MessageFragment message_fragment; //消息页面
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        initFloatView();
+    }
+
+    private void initFloatView() {
+        //获取WindowManager服务引用
+        WindowManager wm = (WindowManager) getSystemService(getApplication().WINDOW_SERVICE);
+        View view = LayoutInflater.from(getApplication()).inflate(R.layout.float_layout, null);
+        view.setOnTouchListener(this);
+        wm.addView(view, new WindowManager.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 40, 40, 40));
     }
 
     @Override
@@ -50,13 +65,13 @@ public class MainActivity extends BaseActivity {
         manager = getSupportFragmentManager();
         transaction = manager.beginTransaction(); //对RadioGroup设置监听
         // 职位
-         job_fragment = JobFragment.newInstance("职位");
+        job_fragment = JobFragment.newInstance("职位");
         //公司
-         company_fragment = CompanyFragment.newInstance("公司");
+        company_fragment = CompanyFragment.newInstance("公司");
         //消息
-         message_fragment = new MessageFragment();
+        message_fragment = new MessageFragment();
         //我的
-         my_fragment = MyFragment.newInstance("我的");
+        my_fragment = MyFragment.newInstance("我的");
         //为事物添加布局页面
         transaction.add(R.id.id_ll_content, job_fragment);
         transaction.add(R.id.id_ll_content, company_fragment);
@@ -110,6 +125,7 @@ public class MainActivity extends BaseActivity {
         }
     };
 
+
     /**
      * 中间按钮event
      */
@@ -120,9 +136,12 @@ public class MainActivity extends BaseActivity {
     //监听返回键 退出应用
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            this.exitapp();
-        }
+      /*  if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (getSupportFragmentManager().getBackStackEntryCount() > 0)//回退栈栈存在Fragment的个数
+                getSupportFragmentManager().popBackStack();
+            else*/
+                this.exitapp();
+//        }
         return true;
     }
 
@@ -134,4 +153,25 @@ public class MainActivity extends BaseActivity {
             System.exit(0);
         }
     }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                UI.showToast(this, "Action_down");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                UI.showToast(this, "Action_move");
+                break;
+            case MotionEvent.ACTION_UP:
+                UI.showToast(this, "Action_up");
+                break;
+            case MotionEvent.ACTION_BUTTON_PRESS:
+                UI.showToast(this, "Action_button_press");
+                break;
+        }
+        return false;
+    }
+
+
 }

@@ -62,7 +62,7 @@ public class JobFragment extends BaseFragment {
             public void onClick(View v) {
                 FragmentManager manager = getFragmentManager();
                 FragmentTransaction transaction = manager.beginTransaction();
-                transaction.addToBackStack(getClass().getName());//将Fragment添加到回退栈中
+                transaction.addToBackStack(null);//将Fragment添加到回退栈中
                 transaction.commit();
                 openIntent(FragBackActivity.class, "测试Fragment回退栈");
             }

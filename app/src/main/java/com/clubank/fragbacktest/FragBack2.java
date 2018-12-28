@@ -44,7 +44,7 @@ public class FragBack2 extends BaseFragment {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startToFragment(getContext(), R.id.fl_content, FragBack3.newInstance("FragBack3"));
+                startToFragment(R.id.fl_content, FragBack3.newInstance("FragBack3"));
             }
         });
     }
