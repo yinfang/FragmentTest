@@ -1,0 +1,176 @@
+俱乐部管家：
+13530940608  123456
+15829106287   123
+
+13279269681   123
+
+18660266253    123
+admin  1
+wer  123
+
+
+黑骑士：手机号       111111
+
+
+总联会（感卡签到）：
+dba    www.cmac2016
+
+
+club10x：admin  1
+	admin  sein
+	ls     1
+	51     1
+	tl     1
+	dba    1
+
+新晔舞蹈： srr     1
+	15991631373   1
+	15029287209   1
+	13772134523   1
+	13572264053   1
+	18629319162   1
+	17792460865   1
+	18302999505   1
+	17600302409   132113
+	13201493727     296807
+	15339141417   1 赵煜
+
+新晔石家庄：
+	15933221849   1
+
+大卫正式版：gl  1
+	    lf  1
+	    XXZYF  1
+英蓝： 18693093581 1
+	1012-2     1
+	18614785212  1
+
+威航客户端：
+18602136255  123456
+15109201431  123456
+陕A00009   陕A00008
+17602981303  123456
+
+集团账号 0718  111111
+
+威航后台系统登录：http://192.168.0.248:8080/weihclient/#/login  admin   admin123
+
+威航员工端：
+账号	密码	姓名		角色
+0001    123456	服务主管1	服务主管
+0004	123456	服务顾问1	服务顾问
+0007	123456	维修组长1	车间组长
+0010	123456	洗车组长1	洗车组长
+0013	123456	维修技师1
+0016	123456	洗车师1
+0019	123456	库管1		库管
+admin  admin123	管理员1		系统管理员
+
+
+安卓点餐：
+正式版地址： https://fir.im/taocan
+http://192.168.0.55:9007/DService.asmx?
+http://192.168.0.7:9007/DService.asmx? 彭卫
+http://192.168.0.60:9007/DService.asmx? 彭卫
+http://192.168.0.43:9001/DService.asmx? 武龙
+
+球会系统软件编号    shxtse
+ dba    1
+消费卡号：8011    会员证号：XYK000662
+消费卡号：8012    会员证号：000051A
+
+
+
+安卓点餐平板
+http://220.231.128.182:8088/DService.asmx?
+dba   china
+
+
+太平洋联盟
+http://123.57.231.238:8015//MainService.asmx
+8888888   123456
+F2018  123
+f2017  123
+M2010  1
+824233 123
+0012   888
+二期测试会员： 会籍号： 858833  手机：18319041071
+	       会籍号： 90910001 手机：13148824232
+		80810001   1
+
+
+健身宝
+13619226464  123123
+
+
+fir账号： 245036167@qq.com   feng19910319
+          919238863@qq.com   112489zyf
+	  251792377@qq.com   01150216   赵
+
+
+svn账号：zhangyinfang    zhangyf
+	 duxy            123123
+svn文档账号：leilongfei   123456
+	     zhangyf  123456
+
+
+公司共享文件地址：\\192.168.0.2
+svn安卓项目地址：https://192.168.0.1:8443/svn/AndroidProject/
+
+禅道账号：zhangyf	zhangyf
+
+SHBC:  PoppyZhang     408089Zyf！
+
+蒲公英： llf   17792075450     a6385136
+极光push：zhangyf@clubank.com   000000a
+
+
+定西深圳测试：
+接口：https://www.showdoc.cc/web/#/149030330731665    密码88824168
+教练 魏倩 13204610035  18729323160
+     许政泽 17545501023
+     范红 13429705570
+     史小叶 18309221770
+
+英蓝测试：https://fir.im/jy81
+
+安卓点餐：https://fir.im/taocan
+威航客户端：https://fir.im/adrClient
+威航员工端：https://fir.im/adrStaff
+定西体育：https://fir.im/dxSports
+club10英蓝正式：https://fir.im/ylclub
+
+
+club10万动：https://fir.im/wandongAdr
+club10蓝积木：https://fir.im/clubx2Ljm
+club10嘉峪关：https://fir.im/gsjygadnr
+club10美格菲：https://fir.im/club2mgf
+club10甘肃天庆：https://fir.im/adrGstq
+club10山脉健身：https://fir.im/smClub
+club10汉中大卫（club10通用版）：https://fir.im/adrhzdw
+
+club10新晔舞蹈：https://fir.im/xyDanceAdr
+club10新晔高新店：https://fir.im/club2gx
+club10新晔金花店：https://fir.im/xyJinhua
+club10新晔丰禾店：https://fir.im/xyFenghe
+club10新晔太原店：https://fir.im/dance2tyadr
+club10新晔石家庄：https://fir.im/xyDancefSJZ
+
+
+h5界面与安卓原生交互： https://www.jianshu.com/p/0b986d6e2e17
+菜鸟教程：http://www.runoob.com/
+github账号：https://github.com/yinfang
+
+    git init //把这个目录变成Git可以管理的仓库
+　　git add README.md //文件添加到仓库
+　　git add . //可以跟单一文件、通配符、目录。一个点就表示所有文件
+　　git commit -m "first commit" //把文件提交到仓库
+　　git remote add origin git@github.com:wangjiax9/practice.git //关联远程仓库
+　　git push -u origin master //把本地库的所有内容推送到远程库上
+
+
+    git config --global core.autocrlf  false //修改Git替换回车换行成统一的CRLF的配置为false
+
+
+
+
